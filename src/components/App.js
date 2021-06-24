@@ -1,3 +1,4 @@
+import Switch from "react-switch";
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
@@ -8,6 +9,7 @@ function App() {
   const [css, setCss] = useLocalStorage('css', '')
   const [js, setJs] = useLocalStorage('js', '')
   const [srcDoc, setSrcDoc] = useState('')
+  const [checked, setchecked] = useState(false)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -29,42 +31,57 @@ function App() {
     FileSaver.saveAs(blob, "download.txt");
   }
 
+  const mode = (checked) => {
+    setchecked(checked);
+  }
+
   return (
     <>
+      <label>
+        <span>Mode</span>
+        <br />
+        <Switch onColor='#000000' checkedIcon={false} uncheckedIcon={false} onChange={mode} checked={checked} />
+      </label>
+
       <button onClick={() => download()}>Download</button>
-      
-      <div className = "box">
-        
-        <div className = "editors">
+
+      <div className="box">
+
+        <div className="editors">
           <div className="pane">
             <Editor
               language="xml"
               displayName="HTML"
               value={html}
               onChange={setHtml}
+              checked={checked}
             />
             <Editor
               language="css"
               displayName="CSS"
               value={css}
               onChange={setCss}
+              checked={checked}
             />
             <Editor
               language="javascript"
               displayName="JS"
               value={js}
               onChange={setJs}
+              checked={checked}
             />
           </div>
         </div>
-        
-        
-        <div style = {{marginRight : "5px",
-                      display  : "flex" ,
-                        marginLeft : "auto" , 
-                        minHeight : "100vh" , 
-                        width : "55%",
-                        overflow : "hidden"}}>
+
+
+        <div style={{
+          marginRight: "5px",
+          display: "flex",
+          marginLeft: "auto",
+          minHeight: "100vh",
+          width: "55%",
+          overflow: "hidden"
+        }}>
           <iframe
             srcDoc={srcDoc}
             title="output"
@@ -76,8 +93,8 @@ function App() {
         </div>
 
       </div>
-      
-      
+
+
     </>
   )
 }

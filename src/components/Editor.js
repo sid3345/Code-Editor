@@ -17,6 +17,7 @@ import 'brace/mode/java';
 
 // Import a Theme (okadia, github, xcode etc)
 import 'brace/theme/terminal';
+import 'brace/theme/github';
 
 export default class Editor extends React.Component {
 
@@ -45,7 +46,7 @@ export default class Editor extends React.Component {
         </div>
         <AceEditor
           mode={this.props.language}
-          theme="terminal"
+          theme={this.props.checked ? "terminal" : "github"}
           className="code-mirror-wrapper"
           onChange={this.props.onChange}
           name="UNIQUE_ID_OF_DIV"
