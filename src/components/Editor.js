@@ -16,7 +16,7 @@ import AceEditor from "react-ace";
 import 'brace/mode/java';
 
 // Import a Theme (okadia, github, xcode etc)
-import 'brace/theme/tomorrow';
+import 'brace/theme/terminal';
 
 export default class Editor extends React.Component {
 
@@ -45,7 +45,7 @@ export default class Editor extends React.Component {
         </div>
         <AceEditor
           mode={this.props.language}
-          theme="tomorrow"
+          theme="terminal"
           className="code-mirror-wrapper"
           onChange={this.props.onChange}
           name="UNIQUE_ID_OF_DIV"

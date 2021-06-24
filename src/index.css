@@ -17,8 +17,7 @@ body {
   height: 50vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  
+  /* width: 100%; */
 }
 
 .editors{
@@ -62,6 +61,7 @@ body {
   padding: .5rem .5rem .5rem 1rem;
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
+  width: 50px;
 }
 
 .CodeMirror {

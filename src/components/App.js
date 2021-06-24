@@ -25,7 +25,7 @@ function App() {
 
 
   const download = () => {
-    var blob = new Blob([html], { type: "text/plain;charset=utf-8" });
+    var blob = new Blob([srcDoc], { type: "text/plain;charset=utf-8" });
     FileSaver.saveAs(blob, "download.txt");
   }
 
@@ -36,7 +36,7 @@ function App() {
       <div className = "box">
         
         <div className = "editors">
-          <div className="pane top-pane">
+          <div className="pane">
             <Editor
               language="xml"
               displayName="HTML"
