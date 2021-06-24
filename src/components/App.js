@@ -34,41 +34,46 @@ function App() {
       <button onClick={() => download()}>Download</button>
       
       <div className = "box">
-
-      <div className="pane top-pane">
-        <Editor
-          language="xml"
-          displayName="HTML"
-          value={html}
-          onChange={setHtml}
-        />
-        <Editor
-          language="css"
-          displayName="CSS"
-          value={css}
-          onChange={setCss}
-        />
-        <Editor
-          language="javascript"
-          displayName="JS"
-          value={js}
-          onChange={setJs}
-        />
-      </div>
-      <div style = {{marginRight : "5px",
-                     display  : "flex" ,
-                      marginLeft : "auto" , 
-                      minHeight : "100vh" , 
-                      width : "54%"}}>
-        <iframe
-          srcDoc={srcDoc}
-          title="output"
-          sandbox="allow-scripts"
-          frameBorder="1"
-          width="100%"
-          height="100%"
-        />
-      </div>
+        
+        <div className = "editors">
+          <div className="pane top-pane">
+            <Editor
+              language="xml"
+              displayName="HTML"
+              value={html}
+              onChange={setHtml}
+            />
+            <Editor
+              language="css"
+              displayName="CSS"
+              value={css}
+              onChange={setCss}
+            />
+            <Editor
+              language="javascript"
+              displayName="JS"
+              value={js}
+              onChange={setJs}
+            />
+          </div>
+        </div>
+        
+        
+        <div style = {{marginRight : "5px",
+                      display  : "flex" ,
+                        marginLeft : "auto" , 
+                        minHeight : "100vh" , 
+                        width : "55%",
+                        overflow : "hidden"}}>
+          <iframe
+            srcDoc={srcDoc}
+            title="output"
+            sandbox="allow-scripts"
+            frameBorder="1"
+            width="100%"
+            height="100%"
+          />
+        </div>
 
       </div>
       

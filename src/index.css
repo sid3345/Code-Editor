@@ -17,8 +17,13 @@ body {
   height: 50vh;
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 100%;
   
+}
+
+.editors{
+  overflow: scroll;
+  width: 45%;
 }
 
 .editor-container {
@@ -28,6 +33,7 @@ body {
   flex-direction: row;
   padding: .5rem;
   background-color: hsl(222, 9%, 22%);
+  width: 100%;
   
 }
 
