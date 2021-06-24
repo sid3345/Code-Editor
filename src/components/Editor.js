@@ -2,6 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/material.css'
+import 'codemirror/mode/xml/xml'
+import 'codemirror/mode/javascript/javascript'
+import 'codemirror/mode/css/css'
+
 // Import AceEditor Component
 
 import AceEditor from "react-ace";
@@ -40,6 +46,7 @@ export default class Editor extends React.Component {
         <AceEditor
           mode={this.props.language}
           theme="tomorrow"
+          className="code-mirror-wrapper"
           onChange={this.props.onChange}
           name="UNIQUE_ID_OF_DIV"
           value={this.props.value}

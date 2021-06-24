@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
+var FileSaver = require('file-saver');
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
@@ -22,8 +23,15 @@ function App() {
     return () => clearTimeout(timeout)
   }, [html, css, js])
 
+
+  const download = () => {
+    var blob = new Blob([html], { type: "text/plain;charset=utf-8" });
+    FileSaver.saveAs(blob, "download.txt");
+  }
+
   return (
     <>
+      <button onClick={() => download()}>Download</button>
       <div className="pane top-pane">
         <Editor
           language="xml"
