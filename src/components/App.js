@@ -32,6 +32,9 @@ function App() {
   return (
     <>
       <button onClick={() => download()}>Download</button>
+      
+      <div className = "box">
+
       <div className="pane top-pane">
         <Editor
           language="xml"
@@ -52,16 +55,24 @@ function App() {
           onChange={setJs}
         />
       </div>
-      <div className="pane">
+      <div style = {{marginRight : "5px",
+                     display  : "flex" ,
+                      marginLeft : "auto" , 
+                      minHeight : "100vh" , 
+                      width : "54%"}}>
         <iframe
           srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
-          frameBorder="0"
+          frameBorder="1"
           width="100%"
           height="100%"
         />
       </div>
+
+      </div>
+      
+      
     </>
   )
 }

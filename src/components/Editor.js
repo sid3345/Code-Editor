@@ -35,13 +35,13 @@ export default class Editor extends React.Component {
       <div className={`editor-container ${this.state.open ? '' : 'collapsed'}`}>
         <div className="editor-title">
           {this.props.displayName}
-          <button
+          {/* <button
             type="button"
             className="expand-collapse-btn"
             onClick={() => this.setState({ open: !this.state.open })}
           >
             <FontAwesomeIcon icon={this.state.open ? faCompressAlt : faExpandAlt} />
-          </button>
+          </button> */}
         </div>
         <AceEditor
           mode={this.props.language}
