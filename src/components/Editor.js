@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
@@ -36,13 +34,7 @@ export default class Editor extends React.Component {
       <div className={`editor-container ${this.state.open ? '' : 'collapsed'}`}>
         <div className="editor-title">
           {this.props.displayName}
-          {/* <button
-            type="button"
-            className="expand-collapse-btn"
-            onClick={() => this.setState({ open: !this.state.open })}
-          >
-            <FontAwesomeIcon icon={this.state.open ? faCompressAlt : faExpandAlt} />
-          </button> */}
+
         </div>
         <AceEditor
           mode={this.props.language}
