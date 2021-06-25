@@ -1,4 +1,12 @@
-A code-editor to run HTML, CSS and JS code and live output beside.
+A code-editor to run HTML, CSS and JS code and live output beside it. Developed using ReactJS.
+
+## Features:
+- Live code output
+- Dark Mode
+- Download code as *download.txt*
+- Responsive Screen
+
+Used ACE Editor (https://ace.c9.io/) as code editor.
 
 # Instructions to run:
 
@@ -16,10 +24,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-## Tech Stack:
-MERN:
-- MongoDB
-- Express
-- ReactJS
-- NodeJS
