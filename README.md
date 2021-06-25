@@ -4,16 +4,15 @@ A code-editor to run HTML, CSS and JS code and live output beside.
 
 In the project directory, you must run:
 
-### `npm install`
-
 1. Installs the libraries.<br />
 
-## Available Scripts
-
-### `npm start`
+### `npm install` 
+<br />
 
 2. Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm start`
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
