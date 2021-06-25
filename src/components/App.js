@@ -37,24 +37,27 @@ function App() {
 
   return (
     <>
-      <label>
-        <span>Mode</span>
-        <br />
-        <Switch onColor='#000000' checkedIcon={false} uncheckedIcon={false} onChange={mode} checked={checked} />
-      </label>
+     
+      
+      <div className = "box">
+        
+        <div className = "editors">
+          <label  style = {{margin : "10px"}}>
+            <span style = {{color : "white", }}>Mode</span>
+            <br />
+            <Switch onColor='#000000' checkedIcon={false} uncheckedIcon={false} onChange={mode} checked={checked} />
+          </label>
 
-      <button onClick={() => download()}>Download</button>
 
-      <div className="box">
+          <button className = "Button" onClick={() => download()}>Download Code</button>
 
-        <div className="editors">
           <div className="pane">
             <Editor
               language="xml"
               displayName="HTML"
               value={html}
               onChange={setHtml}
-              checked={checked}
+              checked={checked}x
             />
             <Editor
               language="css"
